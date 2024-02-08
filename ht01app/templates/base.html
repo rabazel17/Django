@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            Мой первый сайт
+        {% endblock %}
+    </title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="{% url 'main' %}">Главная</a></li>
+        <li><a href="{% url 'about' %}">О себе</a></li>
+    </ul>
+</header>
+<main>
+    {% block content %}
+        Наполнение сайта
+    {% endblock %}
+</main>
+<footer>
+    <p><em>© Все права защищены 2023</em></p>
+</footer>
+</body>
+</html>
